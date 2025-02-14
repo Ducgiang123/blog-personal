@@ -1,0 +1,207 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+    color: #1E73BE;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+.editorjsdiv h2 {
+    font-weight: 600;
+    font-size: 18px;
+}
+.editorjsdiv h3, h4, h5 {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.editorjsdiv li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    padding-left: 10px;
+    margin-left: 25px;
+}
+
+/* New styles to handle cursor behavior */
+body {
+    cursor: default; /* Default cursor for body */
+}
+
+input, textarea {
+    cursor: text; /* Text cursor for input fields */
+}
+
+footer {
+  background: #13141e;
+  width: 100%;
+}
+.dark-footer h3 {
+  color: #fff;
+}
+.light-footer h3 {
+  color: #181a2a;
+}
+footer .container {
+  min-width: 1500px;
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  padding: 30px 20px;
+  gap: 20px;
+  position: relative;
+}
+footer .container:first-child::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: gray;
+  left: 0;
+  bottom: 0;
+}
+footer .container .about,
+footer .container .quick_links,
+footer .container .categories,
+footer .container .news_letter {
+  flex: 1;
+}
+footer .container .about,
+footer .container .categories {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+footer .container .about p {
+  color: gray;
+}
+footer .container .about p span {
+  font-weight: 700;
+  margin-right: 8px;
+}
+footer .container .quick_links {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+}
+footer .container .quick_links ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+footer .container .quick_links ul a {
+  text-decoration: none;
+  color: gray;
+  width: fit-content;
+  transition: 0.3s;
+}
+footer .container .quick_links ul a:hover {
+  font-weight: 700;
+  transition: 0.3s;
+}
+.light-footer .container .quick_links ul a:hover {
+  color: #2563eb;
+}
+.dark-footer .container .quick_links ul a:hover {
+  color: #fff;
+}
+footer .container .categories ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  color: gray;
+}
+footer .container .news_letter {
+  background: #80808036;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 10px;
+  gap: 35px;
+  padding: 0 20px;
+}
+footer .container .news_letter div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+footer .container .news_letter div input {
+  background: #13141e;
+  padding: 8px 5px;
+  border: 1px solid #80808036;
+  border-radius: 7px;
+  color: #fff;
+}
+footer .container .news_letter div input:focus {
+  outline: none;
+}
+footer .container .news_letter div button {
+  background: #2563eb;
+  padding: 8px 5px;
+  border: 1px solid #80808036;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.3s;
+}
+footer .container .news_letter div button:hover {
+  background: #1e40af;
+  transition: 0.3s;
+  cursor: pointer;
+}
+footer .container:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.light-footer .container:last-child .logo {
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: #13141e;
+}
+.dark-footer .container:last-child .logo {
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: #fff;
+}
+footer .container:last-child .logo span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+footer .container:last-child .links {
+  display: flex;
+  gap: 15px;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+footer .container:last-child .links a svg {
+  color: gray;
+  text-decoration: none;
+  font-size: 25px;
+  transition: 0.3s;
+}
+.dark-footer .container:last-child .links a svg:hover {
+  color: #fff;
+  transition: 0.3s;
+}
+.light-footer .container:last-child .links a svg:hover {
+  color: #2563eb;
+  transition: 0.3s;
+}
+
+@media (max-width: 500px) {
+  footer .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
